@@ -1,19 +1,12 @@
-abstract class Cookie{
-    private String flavor;
-    private int size;
-    protected boolean isBaked;
+public abstract class Cookie {
+    public abstract String getName();
+    public abstract void listIngredients();
+    public abstract void bake();
 
-    Cookie(String flav, int size, boolean isBaked){
-        this.flavor= flav;
-        this.size= size;
-        this.isBaked= isBaked;
-    }
-
-    abstract void bake();
-
-    void printInfo(){
-        System.out.println("Flavor:"+this.flavor);
-        System.out.println("Size:"+this.size);
-        System.out.println("Baked?:"+this.isBaked);
+    public void displayRecipe() {
+        System.out.println("\n=== " + getName() + " ===");
+        listIngredients();
+        bake();
+        System.out.println("----------------------");
     }
 }

@@ -1,11 +1,17 @@
-class ChocolateChipCookie extends Cookie{
-    ChocolateChipCookie(String flavor,int size, boolean isBaked){
-        super(flavor,size,isBaked);
-    }
+public class ChocolateChipCookie extends Cookie {
+
     @Override
-    void bake(){
-        System.out.println("Preheat to 350 degrees and bake for 8 mins");
-        System.out.println("Bake and be safe:p");
-        this.isBaked=true;
+    public String getName() {
+        return "Chocolate Chip Cookie";
+    }
+
+    @Override
+    public void listIngredients() {
+        System.out.println("Ingredients: flour, sugar, butter, eggs, chocolate chips");
+    }
+
+    @Override
+    public void bake() {
+        System.out.println("Bake at 350°F for 10-12 minutes.");
     }
 }
